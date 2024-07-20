@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="fetch.css" />
+  </head>
+  <body>
+    <div class="main_div">
+        <video autoplay muted loop plays-inline class="back-video" style="height: 100%; width: 100%;">
+          <source src="bg.mp4" />
+        </video>
+      <div class="music_container">
+        <h1 class="Title" id="title">LOTUS LANE</h1>
+        <h3 class="Artist" id="artist">Arijit Singh</h3>
+        <div class="img_container">
+          <img src="pathan.jpg" alt="#" />
+        </div>
+        <audio src="song1.mp3"></audio>
+        <div class="music_controls">
+          <i class="fa-solid fa-backward" id="prev"></i>
+          <div class="main_btn" id="play">
+            <!-- <i class="fa-solid fa-pause" id="play"></i> -->
+            <i class="fa-solid fa-play" id="play1"></i>
+          </div>
+          <i class="fa-solid fa-forward" id="next"></i>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const music = document.querySelector("audio");
+      const play = document.getElementById("play");
+      const play1 = document.getElementById("play1");
+      const img = document.querySelector("img");
+      const artist = document.getElementById("artist");
+      const title = document.getElementById("title");
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+
+      const songs = [
+        {
+          name:"humsafar",
+          title:"ohHumsafar.mp3",
+          artist: "Neha Kakkar",
+        },
+        {
+          name:"jeenelaga",
+          title:"Jeene Laga Hu.mp3",
+          artist: "Atif Aslam",
+        },
+        {
+          name: "safar",
+          title: "Safar Song.mp3",
+          artist: "Juss and MixSingh",
+        },
+        {
+          name: "mahiya",
+          title: "Aaja Ve Mahiya.mp3",
+          artist: "Ammy Virk",
+        },
+        {
+          name:"teriore",
+          title:"Teri Ore.mp3",
+          artist: "Rahat Fateh Ali Khan",
+        },
+        {
+          name:"teresang",
+          title:"Tere Name Se.mp3",
+          artist: "Arijit Singh",
+        },
+        {
+          name:"MileHoTum",
+          title:"milehotum.mp3",
+          artist: "Neha Kakkar",
+        },
+        {
+          name: "pathan",
+          title: "JhoomeJoPathaan.mp3",
+          artist: "Arijit Singh",
+        },
+        {
+          name: "sitare",
+          title: "Chann Sitare.mp3",
+          artist: "Ammy Virk",
+        },
+        {
+          name: "shadi",
+          title: "Pani Di Gal.mp3",
+          artist: "Ammy Virk",
+        },
+       
+        {
+          name: "dayare",
+          title: "Daayre.mp3",
+          artist: "Arijit Singh",
+        },
+      ];
+
+      let isplaying = false;
+
+      function musicPlay() {
+        play.addEventListener("click", () => {
+          isplaying = true;
+          music.play();
+          play1.classList.replace("fa-pause", "fa-play");
+          play1.style.color = "black";
+          img.classList.add("anime");
+        });
+      }
+
+      function musicPause() {
+        play.addEventListener("click", () => {
+          isplaying = false;
+          music.pause();
+          play1.classList.replace("fa-play", "fa-pause");
+          play1.style.color = "black";
+          img.classList.add("anime");
+        });
+      }
+
+      play.addEventListener("click", () => {
+        if (isplaying) {
+          musicPause();
+        } else {
+          musicPlay();
+        }
+      });
+
+      const loadSong = (songs) => {
+        title.textContent = songs.title;
+        artist.textContent = songs.artist;
+        music.src = songs.name + ".mp3";
+        img.src = songs.name + ".jpg";
+      };
+      let songIndex = 1;
+
+      function nextSong() {
+        songIndex = (songIndex + 1) % songs.length;
+        loadSong(songs[songIndex]);
+        music.play();
+        play1.classList.replace("fa-pause", "fa-play");
+        img.classList.add("anime");
+      }
+      function prevSong() {
+        songIndex = (songIndex - 1 + songs.length) % songs.length;
+        loadSong(songs[songIndex]);
+        loadSong(songs[songIndex]);
+        music.play();
+        play1.classList.replace("fa-pause", "fa-play");
+        img.classList.add("anime");
+      }
+
+      next.addEventListener("click", nextSong);
+      prev.addEventListener("click", prevSong);
+    </script>
+  </body>
+</html>

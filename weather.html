@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="srh">
+        <input type="text" id="inp" value="" placeholder="Enter Location" />
+        <button onclick="mufun()">Search</button>
+      </div>
+      <h2 id="city">Your City</h2>
+      <img src="cloud.png" alt="#" id="img" />
+      <h2 id="temp"></h2>
+      <h2 id="type">Clouds</h2><br>
+      <div class="wind_humidity">
+        <h2 id="wind"></h2>
+        <h2 id="humidity"></h2>
+      </div>
+    </div>
+
+    <script>
+      let city = document.getElementById("city");
+      let temp = document.getElementById("temp");
+      let type = document.getElementById("type");
+      let input = document.getElementById("inp");
+      let image = document.getElementById("img");
+      let wind = document.getElementById("wind");
+      let humidity = document.getElementById("humidity");
+      let apikey = "7782dd505f79478c5850018a9d2d6a7d";
+      const data = async function (search) {
+        let getdata = await fetch(
+          `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apikey}&units=metric`
+        );
+
+        let jsondata = await getdata.json();
+        console.log(jsondata);
+        city.innerHTML = jsondata.name;
+        temp.innerHTML = Math.floor(jsondata.main.temp) + "°C";
+        type.innerHTML = jsondata.weather[0].main;
+        wind.innerHTML= "Wind :"+jsondata.wind.speed+ " km/h";
+        humidity.innerHTML= "Humidity :"+jsondata.main.humidity+ " %";
+
+        if( type.innerHTML=="Clouds"){
+          image.src="cloud.png";
+        }
+        else if(type.innerHTML=="Haze"){
+          image.src="haze.png";
+        }
+        else if(type.innerHTML=="snow"){
+          image.src="snow1.png";
+        }
+        else if(type.innerHTML=="sunny"){
+          image.src="sunny.png";
+        }
+        else{
+          image.src="clear.png";
+  
+        }
+       
+      };
+      function mufun() {
+        let search = input.value;
+        data(search);
+      }
+    </script>
+  </body>
+</html>

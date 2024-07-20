@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+.main_div {
+  width: 100vw;
+  height: 100vh;
+  background-color: #22272c;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+}
+
+.back-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+}
+.Title {
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: bold;
+  color: #ffffff;
+}
+.Artist {
+  font-size: 15px;
+  font-weight: bolder;
+  font-family: sans-serif;
+  margin: 20px 10px;
+  color: #ffffff;
+}
+
+.music_container {
+  height: 55rem;
+  width: 35rem;
+  /* background-color: #000000; */
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 4rem 3rem;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.music_container .img_container {
+  height: 25rem;
+  width: 25rem;
+  margin: 40px auto;
+}
+img {
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.music_controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.music_controls .fa-solid {
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+.main_btn {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: rgb(75, 73, 73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.music_controls .main_btn:hover {
+  background-color: #ece4e4;
+}
+.anime {
+  animation: rotatePlayer 5s linear infinite;
+}
+@keyframes rotatePlayer {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

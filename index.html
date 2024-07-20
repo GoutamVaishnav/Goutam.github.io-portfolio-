@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal portfolio Website</title>
+    <link rel="stylesheet" href="portfolio.css" />
+    <script
+      src="https://kit.fontawesome.com/b52e5b055e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <h1><span style="color: #ff0035">G</span>outam</h1>
+          </div>
+           
+          <ul id="sidebar">
+            <li>
+
+              <div class="homecontectmenu">
+                <div class="homeimage">
+                  <img src="goutam.jpeg" alt="#">
+                  <h2 class="goutam">Goutam</h2>
+                </div>
+                <div class="social-bar">
+                  <a href="https://www.facebook.com/profile.php?id=61552032236529&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/gautamvaishnav3939503?igsh=YmQ2YzVqNnA3czFv" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://x.com/Goutam367773339?t=hUHzk4dKD305TLx8GjSEkQ&s=09" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+                  <a href="https://www.linkedin.com/in/goutam6367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+              </div> 
+
+
+            </li>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenubar()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenubar()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm <span style="color: #ff0035">Goutam</span><br />
+            From India
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------About------------- -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <h1 class="sub-title">About Me</h1>
+            <p class="para">
+              As a Web developer, I leverage my expertise in HTML, CSS,
+              JavaScript, and various frameworks to create sleek, efficient, and
+              user-centric websites. With a keen eye for detail and a passion
+              for problem-solving, I deliver solutions that meet both client
+              expectations and industry standards, ensuring seamless digital
+              experiences
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX Design</span><br />Designing Web Interfaces</li>
+                <li><span>Web Development</span><br />Website Development</li>
+                <li>
+                  <span>Responsive Design</span><br />Crafting websites that
+                  adapt beautifully across devices.
+                </li>
+                <li>
+                  <span>Proficiency in Front-End Technologies</span><br />
+                  HTML, CSS, and JavaScript including frameworks/libraries like
+                  Tailwind CSS etc.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span
+                    >INDIAN INSTITUTE OF INFORMATION TECHNOLOGY, NAGPUR (IIIT
+                    NAGPUR) </span
+                  ><br />Bachelor of technology (2023-2027) <br />Electronics &
+                  Communication Engineering (ECE)<br />2023-2027
+                </li>
+                <li>
+                  <span>KVM PUBLIC SR SEC SCH, SIKAR</span><br />Class 12, RBSE
+                  <br />(84.80 | 2022)
+                </li>
+                <li>
+                  <span>VANDEMATRAM SHIKSHAN SANSTHAN SR SEC SCH, PALI</span
+                  ><br />Class 10, RBSE <br />(95.83 | 2020)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="about-col-2">
+            <img src="about10.png" alt="#" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------Services-------------- -->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              We will create you a unique & user-friendly website that reflects
+              your brand and meets your business goals.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-layer-group"></i>
+            <h2>Front-End Designs</h2>
+            <p>
+              High-fidelity designs having golden ratio, glass morphism,
+              minimalism, micro interactions and more UI trends.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Creating visually appealing and user-friendly interfaces to
+              enhance the overall user experience.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-regular fa-file"></i>
+            <h2>Resume design</h2>
+            <p>
+              Crafting personalized resume designs that showcase your skills,
+              experience, and accomplishments in a visually appealing and
+              professional manner.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------portfolio---------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="musicplayer4.png" alt="#">
+            <div class="layer">
+              <h3>Music Player App</h3>
+              <p>Design Music Player because ,Music is the divine way to tell beautiful, poetic things to the heart.</p>
+              <a href="FetchApi.html" ><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="weather4.png" alt="#">
+            <div class="layer">
+              <h3>Weather App</h3>
+              <p>Design my personal weather assistant.</p>
+              <a href="weather.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="cart5.png" alt="#">
+            <div class="layer">
+              <h3>Design Basic Page</h3>
+              <p>Design this basic page using Figma.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="fooddelivery5.png " alt="#">
+            <div class="layer">
+              <h3>Food Delivery Website</h3>
+              <p>Design Basic Food Website such that Discover, order, enjoy – it's that simple.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+
+    <!-- --------Contact---------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p> <i class="fa-solid fa-envelope"></i> manojdas9025@gmail.com</p>
+            <p> <i class="fa-solid fa-phone"></i> 1234567890</p><br>
+            <div class="social-pages">
+              <a href="https://www.facebook.com/profile.php?id=61552032236529&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/gautamvaishnav3939503?igsh=YmQ2YzVqNnA3czFv" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://x.com/Goutam367773339?t=hUHzk4dKD305TLx8GjSEkQ&s=09" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+              <a href="https://www.linkedin.com/in/goutam6367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="map">
+              <p><i class="fa-solid fa-location-dot"></i>Badi Khatu, Khatu Kalan, Jayal, Nagaur   (Rajasthan)</p><br>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29848.49886524283!2d74.29136878433323!3d27.13239491298109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396b06aa810b41a3%3A0x452473881cf7e4a7!2sBari%20Khatu%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1713110677092!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a href="goutam (2).pdf" download="" class="resume btn">Resume</a>
+          </div>
+          <div class="contact-right">
+            <form action="#" name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="10"  placeholder="Your Message"></textarea>
+              <button type="submit" class="btn resume submit">Send Message</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © Goutam.<i class="fa-solid fa-heart"></i> All rights reserved.</p>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+
+      var sidemenu= document.getElementById("sidebar");
+      function openmenubar() {
+        sidemenu.style.right="0";
+      }
+      function closemenubar() {
+        sidemenu.style.right="-200px";
+      }
+    </script>
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyHFXwzl3_2sM4NyJkMdkwndfvFDjxsAh3tIizvYREvK7eE3Eyk7XoW7xTuB9gaCghctQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg= document.getElementById("msg");
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message Sent Successfully";
+        setTimeout(function(){
+          msg.innerHTML=""
+        },2000)
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+  </body>
+</html>
